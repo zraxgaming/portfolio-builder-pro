@@ -145,6 +145,7 @@ function PortfolioPage() {
                   <div key={c.title} className="commission-card">
                     <div className="commission-title">{c.title}</div>
                     <div className="commission-desc">{c.desc}</div>
+                    {getReviews(c).map((r, i) => <ReviewCard key={i} r={r} />)}
                   </div>
                 ))}
               </div>
