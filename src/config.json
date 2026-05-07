@@ -8,7 +8,7 @@
     "tagline": "Founder of ZCrafy Studios. I build high performance Minecraft Resources and provide high quality minecraft services",
     "status": "available for hire",
     "avatar": "https://leafstudios.dev/images/banner.png",
-    "chips": ["Java", "Plugins", "Discord"]
+    "chips": ["Java", "Web", "Discord"]
   },
   "nav": [
     { "label": "about", "to": "/about" },
