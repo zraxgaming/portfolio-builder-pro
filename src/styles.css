@@ -503,9 +503,20 @@ main.wrapper { animation: fadeIn 0.35s ease both; }
 /* projects grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 16px;
   margin-bottom: 16px;
+}
+.commissions-grid-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.contact-grid-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
 }
 .project-card { margin-bottom: 0; }
 .project-body { display: flex; flex-direction: column; }
