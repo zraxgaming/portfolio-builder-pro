@@ -1,3 +1,5 @@
+import * as path from 'path';
+import { pathToFileURL } from 'url';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 let serverEntry: any;
@@ -8,8 +10,8 @@ async function getServerEntry() {
   if (serverEntryError) throw serverEntryError;
 
   try {
-    // Import the built server entry from dist - server.js exports default with fetch method
-    const module = await import('../dist/server/server.js');
+    const serverPath = pathToFileURL(path.join(process.cwd(), 'dist', 'server', 'server.js')).href;
+    const module = await import(serverPath);
     serverEntry = module.default || module;
     return serverEntry;
   } catch (error) {
@@ -35,13 +37,15 @@ async function createNodeRequest(req: VercelRequest): Promise<Request> {
   const url = `${protocol}://${host}${req.url}`;
 
   const headers = new Headers();
-  Object.entries(req.headers).forEach(([key, value]) => {
-    if (Array.isArray(value)) {
-      value.forEach(v => headers.append(key, v));
-    } else if (value !== undefined) {
-      headers.set(key, String(value));
-    }
-  });
+  Object.entries(req.headers as Record<string, string | string[] | undefined>).forEach(
+    ([key, value]) => {
+      if (Array.isArray(value)) {
+        value.forEach((v) => headers.append(key, v));
+      } else if (value !== undefined) {
+        headers.set(key, String(value));
+      }
+    },
+  );
 
   return new Request(url, {
     method: req.method,
