@@ -93,15 +93,6 @@
     }
   ],
   "commissions": {
-    "intro": "I also help with configs, server setups, and websites. Reach out on Discord with your brief.",
-    "items": [
-      { "title": "Commission Resources", "desc": "Private and public resources built for creators, minigames, and network systems." },
-      { "title": "Servers Worked On", "desc": "Setup, balancing, optimization, and long-term maintenance for live servers." },
-      { "title": "Web Projects", "desc": "Websites, docs portals, and frontend work supporting server brands." }
-    ]
-  }
-  ],
-  "commissions": {
     "intro": "I also Help with configs, server setups, and websites. Reach out on Discord with your brief.",
     "items": [
       { "title": "Commission resources", "desc": "Private and public resources built for creators, minigames, and network systems." },
