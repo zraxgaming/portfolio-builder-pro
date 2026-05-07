@@ -15,11 +15,16 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 function Stars({ n }: { n: number }) {
-  const r = Math.max(0, Math.min(5, n || 0));
+  const r = Math.max(0, Math.min(5, Number(n) || 0));
+  const full = Math.floor(r);
+  const half = r - full >= 0.5;
+  const empty = 5 - full - (half ? 1 : 0);
   return (
-    <span className="stars">
-      {"★".repeat(r)}
-      <span style={{ color: "var(--border2)" }}>{"★".repeat(5 - r)}</span>
+    <span className="stars" aria-label={`${r} out of 5 stars`} title={`${r}/5`}>
+      {Array.from({ length: full }).map((_, i) => <span key={`f${i}`} className="star star-full">★</span>)}
+      {half && <span className="star star-half">★</span>}
+      {Array.from({ length: empty }).map((_, i) => <span key={`e${i}`} className="star star-empty">★</span>)}
+      <span className="stars-num">{r.toFixed(1)}</span>
     </span>
   );
 }
