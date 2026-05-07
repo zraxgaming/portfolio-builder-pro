@@ -29,6 +29,36 @@ function Stars({ n }: { n: number }) {
   );
 }
 
+type Review = {
+  text?: string;
+  rating?: number;
+  reviewer?: { name?: string; handle?: string; avatar?: string };
+};
+
+function ReviewCard({ r }: { r: Review }) {
+  return (
+    <div className="review-card">
+      <div className="review-head">
+        {r.reviewer?.avatar && (
+          <img src={r.reviewer.avatar} alt={r.reviewer.name ?? "reviewer"} className="review-avatar" />
+        )}
+        <div className="review-meta">
+          <div className="review-name">{r.reviewer?.name ?? "Anonymous"}</div>
+          {r.reviewer?.handle && <div className="review-handle">{r.reviewer.handle}</div>}
+        </div>
+        {typeof r.rating === "number" && <Stars n={r.rating} />}
+      </div>
+      {r.text && <p className="review-text">"{r.text}"</p>}
+    </div>
+  );
+}
+
+function getReviews(item: { reviews?: Review[]; review?: Review }): Review[] {
+  if (Array.isArray(item.reviews) && item.reviews.length) return item.reviews;
+  if (item.review) return [item.review];
+  return [];
+}
+
 function PortfolioPage() {
   const { mainProject, projects = [], commissions } = config;
   return (
@@ -91,23 +121,7 @@ function PortfolioPage() {
                     {p.url && p.url !== "#" && (
                       <a href={p.url} className="link-sm">view project</a>
                     )}
-                    {p.review && (
-                      <div className="review-card">
-                        <div className="review-head">
-                          {p.review.reviewer?.avatar && (
-                            <img src={p.review.reviewer.avatar} alt={p.review.reviewer.name} className="review-avatar" />
-                          )}
-                          <div className="review-meta">
-                            <div className="review-name">{p.review.reviewer?.name}</div>
-                            {p.review.reviewer?.handle && (
-                              <div className="review-handle">{p.review.reviewer.handle}</div>
-                            )}
-                          </div>
-                          <Stars n={p.review.rating} />
-                        </div>
-                        {p.review.text && <p className="review-text">"{p.review.text}"</p>}
-                      </div>
-                    )}
+                    {getReviews(p).map((r, i) => <ReviewCard key={i} r={r} />)}
                   </div>
                 </div>
               </div>
@@ -131,6 +145,7 @@ function PortfolioPage() {
                   <div key={c.title} className="commission-card">
                     <div className="commission-title">{c.title}</div>
                     <div className="commission-desc">{c.desc}</div>
+                    {getReviews(c).map((r, i) => <ReviewCard key={i} r={r} />)}
                   </div>
                 ))}
               </div>
