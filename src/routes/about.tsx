@@ -16,7 +16,10 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   const { about } = config;
-  return (
+  const skills = about.skills ?? [];
+  const stack = about.stack ?? [];
+  const alsoKnow = about.alsoKnow ?? [];
+  const focus = about.developer?.focus ?? [];
     <section>
       <SectionLabel>about.md</SectionLabel>
       <div className="about-grid">
