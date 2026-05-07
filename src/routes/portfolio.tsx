@@ -121,23 +121,7 @@ function PortfolioPage() {
                     {p.url && p.url !== "#" && (
                       <a href={p.url} className="link-sm">view project</a>
                     )}
-                    {p.review && (
-                      <div className="review-card">
-                        <div className="review-head">
-                          {p.review.reviewer?.avatar && (
-                            <img src={p.review.reviewer.avatar} alt={p.review.reviewer.name} className="review-avatar" />
-                          )}
-                          <div className="review-meta">
-                            <div className="review-name">{p.review.reviewer?.name}</div>
-                            {p.review.reviewer?.handle && (
-                              <div className="review-handle">{p.review.reviewer.handle}</div>
-                            )}
-                          </div>
-                          <Stars n={p.review.rating} />
-                        </div>
-                        {p.review.text && <p className="review-text">"{p.review.text}"</p>}
-                      </div>
-                    )}
+                    {getReviews(p).map((r, i) => <ReviewCard key={i} r={r} />)}
                   </div>
                 </div>
               </div>
