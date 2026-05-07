@@ -1,15 +1,20 @@
 {
   "identity": {
-    "username": "JuliusH_1",
-    "handle": "@juliush_1",
-    "name": "Julius",
+    "username": "ZainAbusal",
+    "handle": "@zainabusal",
+    "name": "Zain",
     "role": "Minecraft Plugin Developer",
     "studio": "Leaf Studios",
     "tagline": "Founder of Leaf Studios. I build high performance Minecraft plugins from economy systems to custom game engines. Java, Spigot, Paper, Folia.",
     "status": "available for hire",
-    "avatar": "https://cdn.builtbybit.com/storefront_avatars/m/0/475.jpg?1770985782",
+    "avatar": "https://leafstudios.dev/images/banner.png",
     "chips": ["Java", "Plugins", "Discord"]
   },
+  "nav": [
+    { "label": "about", "to": "/about" },
+    { "label": "portfolio", "to": "/portfolio" },
+    { "label": "contact", "to": "/contact" }
+  ],
   "stats": [
     { "value": "15+", "label": "plugins" },
     { "value": "100+", "label": "servers" },
@@ -18,28 +23,28 @@
   ],
   "about": {
     "developer": {
-      "name": "Julius",
-      "alias": "JuliusH_1",
+      "name": "Zain Abusal",
+      "alias": "ZainAbusal",
       "studio": "Leaf Studios",
       "focus": ["Plugin Development", "Custom Game Systems", "Modern GUI Design"],
       "status": "open for work"
     },
     "comment": "Passionate about writing clean, performant Java. Every plugin ships with proper config, full docs and real support.",
-    "stack": ["Java", "Spigot", "Paper", "Folia", "MySQL", "SQLite", "Maven", "Gradle", "Git"]
+    "stack": ["Java", "Spigot", "Paper", "Folia", "MySQL", "SQLite", "Maven", "Gradle", "Git"],
+    "skills": [
+      { "name": "Java", "level": 95 },
+      { "name": "Spigot / Paper", "level": 95 },
+      { "name": "Folia", "level": 80 },
+      { "name": "MySQL / SQLite", "level": 85 },
+      { "name": "GUI Based", "level": 88 },
+      { "name": "Performance Opt.", "level": 90 }
+    ],
+    "alsoKnow": ["Custom GUIs", "HEX Colors", "Async Tasks", "Events API", "PlaceholderAPI", "Plugin Hooks"]
   },
-  "skills": [
-    { "name": "Java", "level": 95 },
-    { "name": "Spigot / Paper", "level": 95 },
-    { "name": "Folia", "level": 80 },
-    { "name": "MySQL / SQLite", "level": 85 },
-    { "name": "GUI Based", "level": 88 },
-    { "name": "Performance Opt.", "level": 90 }
-  ],
-  "alsoKnow": ["Custom GUIs", "HEX Colors", "Async Tasks", "Events API", "PlaceholderAPI", "Plugin Hooks"],
   "mainProject": {
     "title": "Leaf Studios",
     "label": "leaf_studios | main project",
-    "logo": "https://cdn.builtbybit.com/storefront_avatars/m/0/475.jpg?1770985782",
+    "logo": "https://leafstudios.dev/images/banner.png",
     "description": "Premium plugin development studio. Every plugin ships with modern GUI systems, deep config, PlaceholderAPI support, and active maintenance. Used across 100+ servers worldwide.",
     "stats": [
       { "value": "15+", "label": "plugins" },
@@ -49,32 +54,102 @@
     "links": [
       { "label": "visit leaf studios", "url": "https://leafstudios.dev", "primary": true },
       { "label": "builtbybit store", "url": "https://builtbybit.com", "primary": false }
-    ],
-    "featured": ["DonutDuels", "BlockyDonations", "BlockyJoin", "LeafHomes", "TownyDiscord", "TownyWarps", "BlackMarket", "DonutTeams", "+ more"]
+    ]
   },
+  "projects": [
+    {
+      "name": "DonutDuels",
+      "brand": "Leaf Studios",
+      "image": "https://leafstudios.dev/images/banner.png",
+      "summary": "Built a complete 1v1 duels plugin with kit editor, arena rotation, party system, and ELO ranking. Modern GUI flow and full PlaceholderAPI support.",
+      "tags": ["Java", "Paper", "MySQL"],
+      "url": "https://builtbybit.com",
+      "review": {
+        "text": "Insane quality. The plugin runs flawlessly across our network and Zain handled every request fast.",
+        "reviewer": {
+          "name": "DonutSMP Owner",
+          "handle": "@donutowner",
+          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=donut"
+        },
+        "rating": 5
+      }
+    },
+    {
+      "name": "BlockyDonations",
+      "brand": "Leaf Studios",
+      "image": "https://leafstudios.dev/images/banner.png",
+      "summary": "Tebex-integrated donation menu plugin with package previews, dynamic pricing, and animated GUIs. Used on 50+ servers.",
+      "tags": ["Java", "Spigot", "Tebex API"],
+      "url": "https://builtbybit.com",
+      "review": {
+        "text": "Made our donation conversions go up massively. Clean code, clean UI. 10/10.",
+        "reviewer": {
+          "name": "BlockySMP",
+          "handle": "@blockysmp",
+          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=blocky"
+        },
+        "rating": 5
+      }
+    },
+    {
+      "name": "LeafHomes",
+      "brand": "Leaf Studios",
+      "image": "https://leafstudios.dev/images/banner.png",
+      "summary": "Modern /home plugin with per-rank limits, async teleports, custom GUIs, and full Folia support. Drop-in replacement for EssentialsX homes.",
+      "tags": ["Java", "Folia", "SQLite"],
+      "url": "https://builtbybit.com",
+      "review": {
+        "text": "Finally a homes plugin that actually works on Folia. Performance is excellent.",
+        "reviewer": {
+          "name": "FoliaServer",
+          "handle": "@foliasrv",
+          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=folia"
+        },
+        "rating": 5
+      }
+    },
+    {
+      "name": "TownyDiscord",
+      "brand": "Commission",
+      "image": "https://leafstudios.dev/images/banner.png",
+      "summary": "Custom Towny ↔ Discord bridge with town channels, role syncing, and live town stats embedded into the Discord server.",
+      "tags": ["Java", "JDA", "Towny API"],
+      "url": "#",
+      "review": {
+        "text": "Exactly what we needed. Zain understood the brief immediately and shipped early.",
+        "reviewer": {
+          "name": "TownyNetwork",
+          "handle": "@townynet",
+          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=towny"
+        },
+        "rating": 5
+      }
+    }
+  ],
   "commissions": {
-    "intro": "I also build commissioned plugins, server setups, and websites. Click through to see client work, servers I helped build, and project case studies.",
+    "intro": "I also build commissioned plugins, server setups, and websites. Reach out on Discord with your brief.",
     "items": [
       { "title": "Commission Plugins", "desc": "Private and public plugins built for creators, minigames, and network systems." },
       { "title": "Servers Worked On", "desc": "Setup, balancing, optimization, and long term maintenance for live servers." },
       { "title": "Web Projects", "desc": "Websites, docs portals, and frontend work supporting plugin or server brands." }
-    ],
-    "ctaLabel": "open full portfolio + commissions",
-    "ctaUrl": "#"
+    ]
   },
   "contact": {
     "intro": "Need a custom plugin? Custom server setup? Let's talk. Hit me on Discord for the fastest reply, or check out the store on BuiltByBit.",
     "items": [
       { "platform": "discord", "handle": "Leaf Studios Server", "url": "https://discord.gg/" },
       { "platform": "builtbybit", "handle": "@Leaf Studios", "url": "https://builtbybit.com" },
-      { "platform": "github", "handle": "@juliush1", "url": "https://github.com/" }
+      { "platform": "github", "handle": "@zainabusal", "url": "https://github.com/" },
+      { "platform": "email", "handle": "zain@leafstudios.dev", "url": "mailto:zain@leafstudios.dev" },
+      { "platform": "twitter", "handle": "@zainabusal", "url": "https://twitter.com/" },
+      { "platform": "website", "handle": "leafstudios.dev", "url": "https://leafstudios.dev" }
     ]
   },
   "footer": {
-    "text": "JuliusH_1 | Leaf Studios | 2026",
+    "text": "Zain Abusal | Leaf Studios | 2026",
     "links": [
       { "label": "leafstudios.dev", "url": "https://leafstudios.dev" },
-      { "label": "plugins", "url": "#portfolio" },
+      { "label": "plugins", "url": "/portfolio" },
       { "label": "github", "url": "https://github.com" }
     ]
   }
