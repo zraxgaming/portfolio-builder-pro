@@ -95,9 +95,33 @@
   "commissions": {
     "intro": "I also Help with configs, server setups, and websites. Reach out on Discord with your brief.",
     "items": [
-      { "title": "Commission resources", "desc": "Private and public resources built for creators, minigames, and network systems." },
-      { "title": "Servers Worked On", "desc": "Setup, balancing, optimization, and long term maintenance for live servers." },
-      { "title": "Web Projects", "desc": "Websites, docs portals, and frontend work supporting server brands." }
+      {
+        "title": "Commission resources",
+        "desc": "Private and public resources built for creators, minigames, and network systems.",
+        "reviews": [
+          {
+            "text": "Delivered exactly what we needed, ahead of schedule.",
+            "rating": 5,
+            "reviewer": { "name": "NetworkOwner", "handle": "@netowner", "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=net" }
+          }
+        ]
+      },
+      {
+        "title": "Servers Worked On",
+        "desc": "Setup, balancing, optimization, and long term maintenance for live servers.",
+        "reviews": [
+          {
+            "text": "TPS went from 14 to a stable 20. Night and day.",
+            "rating": 5,
+            "reviewer": { "name": "ServerLead", "handle": "@srvlead", "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=srv" }
+          }
+        ]
+      },
+      {
+        "title": "Web Projects",
+        "desc": "Websites, docs portals, and frontend work supporting server brands.",
+        "reviews": []
+      }
     ]
   },
   "contact": {
