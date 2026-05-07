@@ -1,21 +1,10 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "vite build",
+  "outputDirectory": ".output/public",
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
-    {
-      "source": "/email/unsubscribe",
-      "destination": "/api/email/unsubscribe"
-    },
-    {
-      "source": "/(sitemap.xml|robots.txt)",
-      "destination": "/$1"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/api/server"
     }
   ]
 }
