@@ -29,6 +29,36 @@ function Stars({ n }: { n: number }) {
   );
 }
 
+type Review = {
+  text?: string;
+  rating?: number;
+  reviewer?: { name?: string; handle?: string; avatar?: string };
+};
+
+function ReviewCard({ r }: { r: Review }) {
+  return (
+    <div className="review-card">
+      <div className="review-head">
+        {r.reviewer?.avatar && (
+          <img src={r.reviewer.avatar} alt={r.reviewer.name ?? "reviewer"} className="review-avatar" />
+        )}
+        <div className="review-meta">
+          <div className="review-name">{r.reviewer?.name ?? "Anonymous"}</div>
+          {r.reviewer?.handle && <div className="review-handle">{r.reviewer.handle}</div>}
+        </div>
+        {typeof r.rating === "number" && <Stars n={r.rating} />}
+      </div>
+      {r.text && <p className="review-text">"{r.text}"</p>}
+    </div>
+  );
+}
+
+function getReviews(item: { reviews?: Review[]; review?: Review }): Review[] {
+  if (Array.isArray(item.reviews) && item.reviews.length) return item.reviews;
+  if (item.review) return [item.review];
+  return [];
+}
+
 function PortfolioPage() {
   const { mainProject, projects = [], commissions } = config;
   return (
