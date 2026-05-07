@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Abusal - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">portfolio.sh</div>
+        </div>
+        <div class="terminal-content">
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">home</a>
+                <a href="about.html" class="nav-link">about</a>
+                <a href="portfolio.html" class="nav-link">portfolio</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+
+            <section class="hero" id="heroContent"></section>
+            <section class="stats-grid" id="statsContent"></section>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script>
+        async function loadHome() {
+            const config = await loadConfig();
+            
+            const { identity, stats } = config;
+            const names = identity.name.split(/\s+/);
+            const firstName = names[0];
+            const lastName = names.slice(1).join(' ');
+
+            document.getElementById('heroContent').innerHTML = `
+                <div class="status-row">
+                    <span class="status-dot"></span>
+                    <span class="status-text">${identity.status}</span>
+                </div>
+                <div class="hero-prompt">whoami</div>
+                <h1 class="hero-name">
+                    ${firstName}
+                    <span class="hero-accent"> ${lastName}</span>
+                </h1>
+                <div class="hero-role">${identity.role}</div>
+                <p class="hero-desc">/* ${identity.tagline} */</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary">get in touch</a>
+                    <a href="portfolio.html" class="btn btn-ghost">view work</a>
+                </div>
+            `;
+
+            document.getElementById('statsContent').innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-value">${stat.value}</div>
+                    <div class="stat-label">${stat.label}</div>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadHome);
+    </script>
+</body>
+</html>

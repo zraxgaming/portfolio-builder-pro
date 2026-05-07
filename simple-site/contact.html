@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Abusal - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">contact.sh</div>
+        </div>
+        <div class="terminal-content">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="about.html" class="nav-link">about</a>
+                <a href="portfolio.html" class="nav-link">portfolio</a>
+                <a href="contact.html" class="nav-link active">contact</a>
+            </nav>
+
+            <section class="content-section">
+                <h2 class="section-title" id="contactTitle"></h2>
+                <p class="comment" id="contactDesc"></p>
+                <div class="contact-grid" id="contactContent"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script>
+        async function loadContact() {
+            const config = await loadConfig();
+            const { contact } = config;
+
+            document.getElementById('contactTitle').textContent = contact.title;
+            document.getElementById('contactDesc').textContent = `/* ${contact.description} */`;
+
+            document.getElementById('contactContent').innerHTML = contact.items.map(item => `
+                <div class="contact-card">
+                    <h3>${item.label}</h3>
+                    <a href="${item.href}" target="_blank" rel="noopener" class="contact-link">
+                        <span class="contact-icon">${item.icon}</span>
+                        <span>${item.value}</span>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadContact);
+    </script>
+</body>
+</html>

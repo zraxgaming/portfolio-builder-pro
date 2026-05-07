@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Abusal - About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">about.sh</div>
+        </div>
+        <div class="terminal-content">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="about.html" class="nav-link active">about</a>
+                <a href="portfolio.html" class="nav-link">portfolio</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+
+            <section class="content-section">
+                <h2 class="section-title">about me</h2>
+                <div class="card" id="aboutContent"></div>
+            </section>
+
+            <section class="content-section">
+                <h3 class="section-title">skills</h3>
+                <div class="skills-grid" id="skillsContent"></div>
+            </section>
+
+            <section class="content-section">
+                <h3 class="section-title">also familiar with</h3>
+                <div class="card" id="familiarity"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script>
+        async function loadAbout() {
+            const config = await loadConfig();
+            const { about } = config;
+
+            document.getElementById('aboutContent').innerHTML = `
+                <p class="comment">/* ${about.comment} */</p>
+                <div class="stack-section">
+                    <strong>Tech Stack:</strong>
+                    <div class="stack-tags">
+                        ${about.stack.map(tech => `<span class="tag">${tech}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('skillsContent').innerHTML = about.skills.map(skill => `
+                <div class="skill-card">
+                    <div class="skill-name">${skill.name}</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: ${skill.level}%"></div>
+                    </div>
+                    <div class="skill-level">${skill.level}%</div>
+                </div>
+            `).join('');
+
+            document.getElementById('familiarity').innerHTML = `
+                <div class="stack-tags">
+                    ${about.alsoKnow.map(item => `<span class="tag">${item}</span>`).join('')}
+                </div>
+            `;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadAbout);
+    </script>
+</body>
+</html>

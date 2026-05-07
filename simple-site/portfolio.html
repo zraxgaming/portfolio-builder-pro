@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Abusal - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">portfolio.sh</div>
+        </div>
+        <div class="terminal-content">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="about.html" class="nav-link">about</a>
+                <a href="portfolio.html" class="nav-link active">portfolio</a>
+                <a href="contact.html" class="nav-link">contact</a>
+            </nav>
+
+            <section class="content-section">
+                <h2 class="section-title">portfolio</h2>
+                <div class="card" id="portfolioContent"></div>
+            </section>
+
+            <section class="stats-grid" id="portfolioStats"></section>
+        </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script>
+        async function loadPortfolio() {
+            const config = await loadConfig();
+            const { portfolio } = config;
+
+            document.getElementById('portfolioContent').innerHTML = `
+                <h3>${portfolio.title}</h3>
+                <p class="comment">/* main project */</p>
+                <p>${portfolio.description}</p>
+            `;
+
+            document.getElementById('portfolioStats').innerHTML = portfolio.stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-value">${stat.value}</div>
+                    <div class="stat-label">${stat.label}</div>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPortfolio);
+    </script>
+</body>
+</html>

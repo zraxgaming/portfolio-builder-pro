@@ -1,0 +1,66 @@
+{
+  "identity": {
+    "name": "Zain",
+    "handle": "@zainabusal",
+    "role": "Minecraft Plugin Developer",
+    "studio": "ZCraft Studios",
+    "tagline": "Founder of ZCraft Studios. I build high performance Minecraft Resources and provide high quality minecraft services",
+    "status": "available for hire"
+  },
+  "stats": [
+    { "value": "2", "label": "Resources" },
+    { "value": "10+", "label": "servers" },
+    { "value": "5.0", "label": "avg rating" },
+    { "value": "1.5+", "label": "yrs exp" }
+  ],
+  "about": {
+    "comment": "Passionate about writing clean, performant code. Every piece of work delivered with simple configs, full docs and real support.",
+    "stack": ["Java", "Javascript", "React", "Python", "MySQL", "SQLite", "VsCode", "Gradle", "Git"],
+    "skills": [
+      { "name": "Python", "level": 95 },
+      { "name": "React", "level": 95 },
+      { "name": "JavaScript", "level": 80 },
+      { "name": "MySQL / SQLite", "level": 80 },
+      { "name": "GUI Based", "level": 88 },
+      { "name": "Performance Opt.", "level": 90 }
+    ],
+    "alsoKnow": ["Custom GUIs", "HEX Colors", "Async Tasks", "Events API", "Web-Dev", "Plugin Hooks"]
+  },
+  "portfolio": {
+    "title": "ZCraft Studios",
+    "description": "Premium minecraft development studio. Every resource ships with modern GUI systems, deep config, PlaceholderAPI support, and active maintenance. Used across 100+ servers worldwide.",
+    "stats": [
+      { "value": "5+", "label": "resources" },
+      { "value": "100+", "label": "servers" },
+      { "value": "4.9", "label": "avg rating" },
+      { "value": "2+", "label": "yrs active" }
+    ]
+  },
+  "contact": {
+    "title": "Let's work together",
+    "description": "I'm always interested in new opportunities and exciting projects. Feel free to reach out!",
+    "items": [
+      {
+        "type": "email",
+        "icon": "📧",
+        "label": "Email",
+        "value": "contact@zainabusal.dev",
+        "href": "mailto:contact@zainabusal.dev"
+      },
+      {
+        "type": "discord",
+        "icon": "💬",
+        "label": "Discord",
+        "value": "ZainAbusal#1234",
+        "href": "https://discord.gg/zainabusal"
+      },
+      {
+        "type": "github",
+        "icon": "🐙",
+        "label": "GitHub",
+        "value": "zainabusal",
+        "href": "https://github.com/zainabusal"
+      }
+    ]
+  }
+}
