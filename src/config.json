@@ -4,8 +4,8 @@
     "handle": "@zainabusal",
     "name": "Zain",
     "role": "Minecraft Plugin Developer",
-    "studio": "Leaf Studios",
-    "tagline": "Founder of Leaf Studios. I build high performance Minecraft plugins from economy systems to custom game engines. Java, Spigot, Paper, Folia.",
+    "studio": "ZCraft Studios",
+    "tagline": "Founder of ZCrafy Studios. I build high performance Minecraft Resources and provide high quality minecraft services",
     "status": "available for hire",
     "avatar": "https://leafstudios.dev/images/banner.png",
     "chips": ["Java", "Plugins", "Discord"]
@@ -16,141 +16,116 @@
     { "label": "contact", "to": "/contact" }
   ],
   "stats": [
-    { "value": "15+", "label": "plugins" },
-    { "value": "100+", "label": "servers" },
+    { "value": "2", "label": "Resources" },
+    { "value": "10+", "label": "servers" },
     { "value": "5.0", "label": "avg rating" },
-    { "value": "3+", "label": "yrs exp" }
+    { "value": "1.5+", "label": "yrs exp" }
   ],
   "about": {
     "developer": {
       "name": "Zain Abusal",
       "alias": "ZainAbusal",
-      "studio": "Leaf Studios",
-      "focus": ["Plugin Development", "Custom Game Systems", "Modern GUI Design"],
+      "studio": "ZCraft Studios",
+      "focus": ["Minecraft Development", "Custom Game Systems", "Modern GUI Design"],
       "status": "open for work"
     },
-    "comment": "Passionate about writing clean, performant Java. Every plugin ships with proper config, full docs and real support.",
-    "stack": ["Java", "Spigot", "Paper", "Folia", "MySQL", "SQLite", "Maven", "Gradle", "Git"],
+    "comment": "Passionate about writing clean, performant . Every Piece of work delivered with simple configs, full docs and real support.",
+    "stack": ["Java", "Javascript", "React", "Python", "MySQL", "SQLite", "VsCode", "Gradle", "Git"],
     "skills": [
-      { "name": "Java", "level": 95 },
-      { "name": "Spigot / Paper", "level": 95 },
-      { "name": "Folia", "level": 80 },
-      { "name": "MySQL / SQLite", "level": 85 },
+      { "name": "Python", "level": 95 },
+      { "name": "React", "level": 95 },
+      { "name": "JavaScript", "level": 80 },
+      { "name": "MySQL / SQLite", "level": 80 },
       { "name": "GUI Based", "level": 88 },
       { "name": "Performance Opt.", "level": 90 }
     ],
-    "alsoKnow": ["Custom GUIs", "HEX Colors", "Async Tasks", "Events API", "PlaceholderAPI", "Plugin Hooks"]
+    "alsoKnow": ["Custom GUIs", "HEX Colors", "Async Tasks", "Events API", "Web-Dev", "Plugin Hooks"]
   },
   "mainProject": {
-    "title": "Leaf Studios",
-    "label": "leaf_studios | main project",
+    "title": "ZCraf Studios",
+    "label": "zcraft_studios | main project",
     "logo": "https://leafstudios.dev/images/banner.png",
-    "description": "Premium plugin development studio. Every plugin ships with modern GUI systems, deep config, PlaceholderAPI support, and active maintenance. Used across 100+ servers worldwide.",
+    "description": "Premium minecraft development studio. Every resource ships with modern GUI systems, deep config, PlaceholderAPI support, and active maintenance. Used across 100+ servers worldwide.",
     "stats": [
-      { "value": "15+", "label": "plugins" },
-      { "value": "500+", "label": "users" },
+      { "value": "5+", "label": "resources" },
+      { "value": "50+", "label": "users" },
       { "value": "5.0 ★", "label": "rating" }
     ],
     "links": [
-      { "label": "visit leaf studios", "url": "https://leafstudios.dev", "primary": true },
-      { "label": "builtbybit store", "url": "https://builtbybit.com", "primary": false }
+      { "label": "visit zcraft studios", "url": "https://studio.z-craft.xyz", "primary": true },
+      { "label": "builtbybit store", "url": "https://builtbybit.com/members/zcraft-studios.662024/", "primary": false }
     ]
   },
-  "projects": [
+ "projects": [
     {
-      "name": "DonutDuels",
-      "brand": "Leaf Studios",
+      "name": "Minecraft Community Hub",
+      "brand": "ZCraft Studios",
       "image": "https://leafstudios.dev/images/banner.png",
-      "summary": "Built a complete 1v1 duels plugin with kit editor, arena rotation, party system, and ELO ranking. Modern GUI flow and full PlaceholderAPI support.",
-      "tags": ["Java", "Paper", "MySQL"],
-      "url": "https://builtbybit.com",
+      "summary": "Production-ready Minecraft server website with admin dashboard, Discord OAuth, forums, ban appeals, SEO, email system, and live chat bridge. Fully configurable via .env — no code editing required.",
+      "tags": ["React", "TypeScript", "Supabase", "Tailwind CSS", "Vercel"],
+      "url": "https://builtbybit.com/resources/minecraft-community-hub.101610/",
       "review": {
-        "text": "Insane quality. The plugin runs flawlessly across our network and Zain handled every request fast.",
+        "text": "Saved us weeks of work. The admin panel and Discord integration work flawlessly out of the box.",
         "reviewer": {
-          "name": "DonutSMP Owner",
-          "handle": "@donutowner",
-          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=donut"
+          "name": "ZCraft Owner",
+          "handle": "@zcraftmc",
+          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=zcraft"
         },
         "rating": 5
       }
     },
     {
-      "name": "BlockyDonations",
-      "brand": "Leaf Studios",
+      "name": "Evidence Case Bot",
+      "brand": "ZCraft Studios",
       "image": "https://leafstudios.dev/images/banner.png",
-      "summary": "Tebex-integrated donation menu plugin with package previews, dynamic pricing, and animated GUIs. Used on 50+ servers.",
-      "tags": ["Java", "Spigot", "Tebex API"],
-      "url": "https://builtbybit.com",
+      "summary": "Discord-native staff case management system with Forum threads, auto-tagging, appeal tracking, dual SQLite + JSON storage, and full audit logs — all via slash commands. Every case gets a unique ticket ID.",
+      "tags": ["Node.js", "Discord.js", "SQLite", "Slash Commands"],
+      "url": "https://discord.gg/",
       "review": {
-        "text": "Made our donation conversions go up massively. Clean code, clean UI. 10/10.",
+        "text": "Finally a proper evidence system. No more messy spreadsheets — everything is tracked, tagged, and logged automatically.",
         "reviewer": {
-          "name": "BlockySMP",
-          "handle": "@blockysmp",
-          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=blocky"
-        },
-        "rating": 5
-      }
-    },
-    {
-      "name": "LeafHomes",
-      "brand": "Leaf Studios",
-      "image": "https://leafstudios.dev/images/banner.png",
-      "summary": "Modern /home plugin with per-rank limits, async teleports, custom GUIs, and full Folia support. Drop-in replacement for EssentialsX homes.",
-      "tags": ["Java", "Folia", "SQLite"],
-      "url": "https://builtbybit.com",
-      "review": {
-        "text": "Finally a homes plugin that actually works on Folia. Performance is excellent.",
-        "reviewer": {
-          "name": "FoliaServer",
-          "handle": "@foliasrv",
-          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=folia"
-        },
-        "rating": 5
-      }
-    },
-    {
-      "name": "TownyDiscord",
-      "brand": "Commission",
-      "image": "https://leafstudios.dev/images/banner.png",
-      "summary": "Custom Towny ↔ Discord bridge with town channels, role syncing, and live town stats embedded into the Discord server.",
-      "tags": ["Java", "JDA", "Towny API"],
-      "url": "#",
-      "review": {
-        "text": "Exactly what we needed. Zain understood the brief immediately and shipped early.",
-        "reviewer": {
-          "name": "TownyNetwork",
-          "handle": "@townynet",
-          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=towny"
+          "name": "Server Staff Team",
+          "handle": "@staffteam",
+          "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=staff"
         },
         "rating": 5
       }
     }
   ],
   "commissions": {
-    "intro": "I also build commissioned plugins, server setups, and websites. Reach out on Discord with your brief.",
+    "intro": "I also help with configs, server setups, and websites. Reach out on Discord with your brief.",
     "items": [
-      { "title": "Commission Plugins", "desc": "Private and public plugins built for creators, minigames, and network systems." },
+      { "title": "Commission Resources", "desc": "Private and public resources built for creators, minigames, and network systems." },
+      { "title": "Servers Worked On", "desc": "Setup, balancing, optimization, and long-term maintenance for live servers." },
+      { "title": "Web Projects", "desc": "Websites, docs portals, and frontend work supporting server brands." }
+    ]
+  }
+  ],
+  "commissions": {
+    "intro": "I also Help with configs, server setups, and websites. Reach out on Discord with your brief.",
+    "items": [
+      { "title": "Commission resources", "desc": "Private and public resources built for creators, minigames, and network systems." },
       { "title": "Servers Worked On", "desc": "Setup, balancing, optimization, and long term maintenance for live servers." },
-      { "title": "Web Projects", "desc": "Websites, docs portals, and frontend work supporting plugin or server brands." }
+      { "title": "Web Projects", "desc": "Websites, docs portals, and frontend work supporting server brands." }
     ]
   },
   "contact": {
     "intro": "Need a custom plugin? Custom server setup? Let's talk. Hit me on Discord for the fastest reply, or check out the store on BuiltByBit.",
     "items": [
-      { "platform": "discord", "handle": "Leaf Studios Server", "url": "https://discord.gg/" },
-      { "platform": "builtbybit", "handle": "@Leaf Studios", "url": "https://builtbybit.com" },
-      { "platform": "github", "handle": "@zainabusal", "url": "https://github.com/" },
-      { "platform": "email", "handle": "zain@leafstudios.dev", "url": "mailto:zain@leafstudios.dev" },
-      { "platform": "twitter", "handle": "@zainabusal", "url": "https://twitter.com/" },
-      { "platform": "website", "handle": "leafstudios.dev", "url": "https://leafstudios.dev" }
+      { "platform": "discord", "handle": "ZCraft Studios Server", "url": "https://discord.gg/" },
+      { "platform": "builtbybit", "handle": "@ZCraft Studios", "url": "https://builtbybit.com" },
+      { "platform": "github", "handle": "@zain-abusal", "url": "https://github.com/zain-abusal" },
+      { "platform": "email", "handle": "zain@leafstudios.dev", "url": "mailto:zain@z-craft.xyz" },
+      { "platform": "twitter", "handle": "@zainabusal", "url": "https://x.com/zainabusal" },
+      { "platform": "website", "handle": "leafstudios.dev", "url": "https://studio.z-craft.xyz" }
     ]
   },
   "footer": {
-    "text": "Zain Abusal | Leaf Studios | 2026",
+    "text": "Zain Abusal | ZCraft Studios | 2026",
     "links": [
-      { "label": "leafstudios.dev", "url": "https://leafstudios.dev" },
+      { "label": "leafstudios.dev", "url": "https://studio.z-craft.xyz" },
       { "label": "plugins", "url": "/portfolio" },
-      { "label": "github", "url": "https://github.com" }
+      { "label": "github", "url": "https://github.com/zain-abusal" }
     ]
   }
 }
