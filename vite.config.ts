@@ -15,9 +15,16 @@ export default defineConfig({
     tailwindcss(),
     tsConfigPaths(),
   ],
+
   resolve: {
     alias: {
       "@": "/src",
     },
   },
+
+  // IMPORTANT: do NOT force build output or SSR paths
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+  }
 });
