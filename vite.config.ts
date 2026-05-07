@@ -22,9 +22,7 @@ export default defineConfig({
     },
   },
 
-  // IMPORTANT: do NOT force build output or SSR paths
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
-  }
+  // IMPORTANT:
+  // DO NOT override outputDir or SSR build structure
+  // Let TanStack Start control it fully
 });

@@ -1,3 +1,0 @@
-import handler from "../dist/server/server";
-
-export default handler;
