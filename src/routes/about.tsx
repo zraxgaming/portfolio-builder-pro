@@ -16,6 +16,10 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   const { about } = config;
+  const skills = about.skills ?? [];
+  const stack = about.stack ?? [];
+  const alsoKnow = about.alsoKnow ?? [];
+  const focus = about.developer?.focus ?? [];
   return (
     <section>
       <SectionLabel>about.md</SectionLabel>
@@ -29,21 +33,23 @@ function AboutPage() {
 {"  "}name: <span className="kw-string">"{about.developer.name}"</span>,{"\n"}
 {"  "}alias: <span className="kw-string">"{about.developer.alias}"</span>,{"\n"}
 {"  "}studio: <span className="kw-string">"{about.developer.studio}"</span>,{"\n"}
-{"  "}focus: [{about.developer.focus.map((f, i) => (
+{"  "}focus: [{focus.map((f, i) => (
   <span key={f}>
-    <span className="kw-string">"{f}"</span>{i < about.developer.focus.length - 1 ? ", " : ""}
+    <span className="kw-string">"{f}"</span>{i < focus.length - 1 ? ", " : ""}
   </span>
 ))}],{"\n"}
 {"  "}status: <span className="kw-string">"{about.developer.status}"</span>{"\n"}
 {"}"};{"\n\n"}
 <span className="kw-comment">/* {about.comment} */</span>
             </div>
-            <div className="tech-group">
-              <div className="tech-group-label">// stack</div>
-              <div className="tags">
-                {about.stack.map((t) => <span key={t} className="tag">{t}</span>)}
+            {stack.length > 0 && (
+              <div className="tech-group">
+                <div className="tech-group-label">// stack</div>
+                <div className="tags">
+                  {stack.map((t) => <span key={t} className="tag">{t}</span>)}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 
@@ -51,7 +57,7 @@ function AboutPage() {
           <WindowBar title="skills" accent=".lst" />
           <div className="window-body">
             <div className="skills-list">
-              {about.skills.map((s) => (
+              {skills.map((s) => (
                 <div key={s.name} className="skill-row">
                   <span className="skill-row-name">{s.name}</span>
                   <div className="skill-bar-track">
@@ -61,12 +67,14 @@ function AboutPage() {
                 </div>
               ))}
             </div>
-            <div className="tech-group">
-              <div className="tech-group-label">// also know</div>
-              <div className="tags">
-                {about.alsoKnow.map((t) => <span key={t} className="tag">{t}</span>)}
+            {alsoKnow.length > 0 && (
+              <div className="tech-group">
+                <div className="tech-group-label">// also know</div>
+                <div className="tags">
+                  {alsoKnow.map((t) => <span key={t} className="tag">{t}</span>)}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

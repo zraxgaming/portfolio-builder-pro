@@ -16,18 +16,21 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const { contact } = config;
+  const items = contact?.items ?? [];
   return (
     <section>
       <SectionLabel>contact.sh</SectionLabel>
       <div className="window">
         <WindowBar title="reach_out" accent=".exe" />
         <div className="window-body">
-          <div className="commissions-head">
-            <span className="kw-comment">// {contact.intro}</span>
-          </div>
-          <div className="contact-grid">
-            {contact.items.map((c) => (
-              <a key={c.platform} href={c.url} className="contact-item">
+          {contact?.intro && (
+            <div className="commissions-head">
+              <span className="kw-comment">// {contact.intro}</span>
+            </div>
+          )}
+          <div className="contact-grid-fluid">
+            {items.map((c) => (
+              <a key={c.platform + c.handle} href={c.url} className="contact-item">
                 <div className="contact-icon">◆</div>
                 <div>
                   <div className="contact-text-platform">{c.platform}</div>
